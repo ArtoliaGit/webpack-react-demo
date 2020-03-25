@@ -9,6 +9,11 @@ module.exports = merge(baseWebpack, {
   plugins: [
     new htmlWebpackPlugin({
       template: path.resolve(__dirname, '../public/index.html'),
+      filename: 'index.html',
+      templateParameters: {
+        BASE_URL: '',
+        title: 'webpack demo',
+      },
     }),
     new webpack.HotModuleReplacementPlugin(),
   ],

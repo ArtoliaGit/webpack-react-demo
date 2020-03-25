@@ -6,16 +6,18 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config ./build/webpack.dev.js",
     "start": "npm run dev",
-    "build": "",
+    "build": "webpack --config ./build/webpack.prod.js",
     "lint": "eslint --ext .js, src"
   },
   "author": "artolia",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "eslint": "^6.8.0",
     "eslint-loader": "^3.0.3",
     "html-webpack-plugin": "^3.2.0",
@@ -25,6 +27,10 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "lodash": "^4.17.15"
+    "@babel/runtime": "^7.9.2",
+    "@babel/runtime-corejs3": "^7.9.2",
+    "core-js": "^3.6.4",
+    "lodash": "^4.17.15",
+    "regenerator-runtime": "^0.13.5"
   }
 }
